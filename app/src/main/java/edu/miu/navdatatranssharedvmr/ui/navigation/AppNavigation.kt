@@ -19,16 +19,32 @@ fun AppNavigation(
 ) {
     NavHost(navController = navHostController, startDestination = "homeScreen") {
         composable(route = "homeScreen") {
-            HomeScreen(navController = navHostController, modifier = modifier, sharedViewModel = sharedViewModel)
+            HomeScreen(
+                navController = navHostController,
+                modifier = modifier,
+                sharedViewModel = sharedViewModel
+            )
         }
         composable(route = "programsScreen") {
-            ProgramsScreen(navController = navHostController, modifier = modifier, sharedViewModel = sharedViewModel)
+            ProgramsScreen(
+                navController = navHostController,
+                modifier = modifier,
+                sharedViewModel = sharedViewModel
+            )
         }
         composable(route = "computerScienceScreen") {
-            ComputerScienceScreen(navController = navHostController, modifier = modifier, sharedViewModel = sharedViewModel)
+            ComputerScienceScreen(
+                navController = navHostController,
+                modifier = modifier,
+                sharedViewModel = sharedViewModel
+            )
         }
         composable(route = "businessAdministrationScreen") {
-            BusinessAdministrationScreen(navController = navHostController, modifier = modifier, sharedViewModel = sharedViewModel)
+            BusinessAdministrationScreen(
+                navController = navHostController,
+                modifier = modifier,
+                sharedViewModel = sharedViewModel
+            )
         }
     }
 }

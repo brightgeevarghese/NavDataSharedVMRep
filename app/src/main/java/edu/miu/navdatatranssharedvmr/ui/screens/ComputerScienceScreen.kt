@@ -17,7 +17,11 @@ import androidx.navigation.NavController
 import edu.miu.navdatatranssharedvmr.ui.viewModel.SharedViewModel
 
 @Composable
-fun ComputerScienceScreen(navController: NavController, modifier: Modifier = Modifier, sharedViewModel: SharedViewModel) {
+fun ComputerScienceScreen(
+    navController: NavController,
+    modifier: Modifier = Modifier,
+    sharedViewModel: SharedViewModel
+) {
     val programDetailsUIState by sharedViewModel.programDetailsUiState.collectAsState()
 
     Column(
