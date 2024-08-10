@@ -28,14 +28,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NavDataTransSharedVMRTheme {
-                val navController: NavHostController = rememberNavController()
                 val sharedViewModel: SharedViewModel = hiltViewModel()
-                Scaffold(
-                    modifier = Modifier.fillMaxSize(),
-                    topBar = { TopBar(navController = navController)}
-                ) { innerPadding ->
-                    AppNavigation(navHostController = navController, modifier = Modifier.padding(innerPadding), sharedViewModel = sharedViewModel)
-                }
+                AppNavigation(sharedViewModel = sharedViewModel)
             }
         }
     }
@@ -45,6 +39,5 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     NavDataTransSharedVMRTheme {
-
     }
 }
