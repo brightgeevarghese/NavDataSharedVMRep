@@ -29,7 +29,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             NavDataTransSharedVMRTheme {
                 val sharedViewModel: SharedViewModel = hiltViewModel()
-                AppNavigation(sharedViewModel = sharedViewModel)
+                val navHostController: NavHostController = rememberNavController()
+                AppNavigation(navHostController = navHostController, sharedViewModel = sharedViewModel)
             }
         }
     }

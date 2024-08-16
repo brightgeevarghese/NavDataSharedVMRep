@@ -17,8 +17,7 @@ import edu.miu.navdatatranssharedvmr.ui.screens.ProgramsScreen
 import edu.miu.navdatatranssharedvmr.ui.viewModel.SharedViewModel
 
 @Composable
-fun AppNavigation(sharedViewModel: SharedViewModel) {
-    val navHostController: NavHostController = rememberNavController()
+fun AppNavigation(navHostController: NavHostController, sharedViewModel: SharedViewModel) {
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = { TopBar(navController = navHostController) }
@@ -54,5 +53,4 @@ fun AppNavigation(sharedViewModel: SharedViewModel) {
             }
         }
     }
-
 }
